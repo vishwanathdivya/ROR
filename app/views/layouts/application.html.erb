@@ -7,9 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= link_to "About us",about_path %>
-	<%= link_to "SIGN IN", "#" %>
 	<%= render 'layouts/header' %>
+	<% flash.each do |name,message| %>
+	<% end %>
+	<nav>
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
 <%= yield %>
 
 </body>
